@@ -1,0 +1,38 @@
+
+.aside-title {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.checkbox-filter {
+  margin-bottom: 1rem;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox input {
+  margin-right: 0.5rem;
+}
+
+.sort-options {
+  margin: 1rem 0;
+}
+
+.sort-options label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Style radio buttons */
+.sort-options input[type='radio'] {
+  margin-right: 0.5rem;
+}
+
+/* Style for the sliders */
+.price-filter {
+  margin: 1rem 0;
+}

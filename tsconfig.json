@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "noImplicitAny": false, // Allow implicit 'any' types
+    "strict": false, // Disable strict mode
+    "skipLibCheck": true // Skip type checking of declaration files
+  }
+}
