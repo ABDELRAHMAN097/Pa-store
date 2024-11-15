@@ -10,11 +10,18 @@ import OutlineButton from '../helpers/buttons/OutlineButton';
 // تعريف النوع لخصائص السهم (إن وجد)
 interface ProductSliderProps {
   title: string;
+  types?: string[];  // إضافة خاصية types
+  selectedType?: string;  // إضافة خاصية selectedType
   buttonTitle: string;
 }
 
-const ProductSlider: React.FC<ProductSliderProps> = ({ title, buttonTitle }) => {
+const ProductSlider: React.FC<ProductSliderProps> = ({ title, types = [], selectedType, buttonTitle }) => {
   const { products } = useProductContext(); // جلب المنتجات من الـ Context
+
+  // تصفية المنتجات بناءً على النوع المحدد إذا كانت types موجودة
+  const filteredProducts = types.length > 0
+    ? products.filter(product => product.category === selectedType)
+    : products;
 
   // إعدادات السلايدر (Slider)
   const settings = {
@@ -70,7 +77,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, buttonTitle }) => 
                 <div id="tab1" className="tab-pane w-full active">
                   <Slider {...settings} className="products-slick">
                     {/* عناصر السلايدر */}
-                    {products.map((product, index) => (
+                    {filteredProducts.map((product, index) => (
                       <div className="product !scale-[0.95] hover:!scale-1" key={product.id}>
                         <Link to={`/ProductDetails/books/${product.id}`}>
                           <div className="product-img">
