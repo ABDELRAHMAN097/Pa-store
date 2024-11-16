@@ -56,7 +56,7 @@ const ProductDetails: React.FC = () => {
 
   const handelPdf = () => {
     window.open(
-      `https://drive.google.com/file/d/1Brn2_YksLrDpXJqstZDIcGBoc10Wrcyg/view?usp=sharing`,
+      `https://drive.google.com/file/d/10T-iT0l-6Bbrsmt3_aXwz6F04fbBw9GF/view?usp=sharing`,
       "_blank"
     );
   };
