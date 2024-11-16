@@ -54,6 +54,13 @@ const ProductDetails: React.FC = () => {
     arrows: true,
   };
 
+  const handelPdf = () => {
+    window.open(
+      `https://drive.google.com/file/d/1Brn2_YksLrDpXJqstZDIcGBoc10Wrcyg/view?usp=sharing`,
+      "_blank"
+    );
+  };
+
   return (
     <div className="section">
       <div className="container">
@@ -96,6 +103,9 @@ const ProductDetails: React.FC = () => {
                 <button className="add-to-cart-btn mt-3 w-full" onClick={handleBuyNowClick}>
                   <i className="fa fa-shopping-cart"></i> شراء الان
                 </button>
+                <button className="add-to-cart-btn mt-3 w-full" onClick={handelPdf}>
+          تصفح اول صفحتين    
+          </button>
               </div>
             </div>
           </div>
@@ -148,6 +158,9 @@ const ProductDetails: React.FC = () => {
           />
           <button type="submit" className="bg-green-500 text-white w-full py-3 rounded-md hover:bg-green-600 focus:outline-none transition">
             تأكيد
+          </button>
+          <button className="bg-green-500 text-white w-full py-3 rounded-md hover:bg-green-600 focus:outline-none transition" onClick={handelPdf}>
+          تصفح اول صفحتين    
           </button>
         </form>
       </Modal>
