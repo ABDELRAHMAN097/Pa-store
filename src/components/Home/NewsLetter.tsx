@@ -7,7 +7,7 @@ const Newsletter: React.FC = () => {
     <div id="newsletter" className="section !mt-0">
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 mt-64">
             <div className="newsletter">
               <p>اشترك في <strong className='text-primary-text hover:bg-primary-text-hover'>النشرة الإخبارية</strong></p>
               <form>

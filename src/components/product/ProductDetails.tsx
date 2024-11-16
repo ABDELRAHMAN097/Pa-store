@@ -94,7 +94,7 @@ const ProductDetails: React.FC = () => {
                 </h3>
                 <span className="product-available">{product.stockStatus}</span>
               </div>
-              <p className='w-full text-justify'>{product.description}</p>
+              <p className='w-full text-justify text-3xl leading-tight'>{product.description}</p>
 
               <div className="add-to-cart w-full mt-[20px]">
                 <button className="add-to-cart-btn w-full">
