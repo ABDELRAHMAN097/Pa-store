@@ -14,6 +14,7 @@ import BrowseJobs from "./pages/browsejobs/BrowseJobs";
 import JobDetails from "./pages/jobDetails/JobDetails";
 import ProductDetails from "./components/product/ProductDetails";
 import Consultations from "./components/Consultations/Consultations";
+import Booking from "./components/Booking/Booking";
 
 
 function App() {
@@ -71,6 +72,10 @@ function App() {
     {
       path: "consultations",
       element: <Consultations />,
+    },
+    {
+      path: "Booking",
+      element: <Booking />,
     },
     {
       path: "*",

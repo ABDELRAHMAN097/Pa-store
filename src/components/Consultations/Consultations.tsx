@@ -1,6 +1,7 @@
 import bgfd from '../../assets/Consultations.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo, faClock, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Consultations = () => {
@@ -35,9 +36,9 @@ const Consultations = () => {
         </p>
       </div>
       </div>
-      <button className="bg-green-500 hover:bg-green-600 text-white font-bold my-4 py-2 px-4 rounded w-full">
+      <Link to="/Booking" className="bg-green-500 hover:bg-green-600 text-white font-bold my-4 py-2 px-4 rounded w-full">
           احجز الجلسة الآن
-        </button>
+      </Link>
 
      
     </div>
