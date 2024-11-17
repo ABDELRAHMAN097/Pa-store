@@ -1,6 +1,6 @@
 import bgfd from '../../assets/Consultations.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo, faClock, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 
 const Consultations = () => {
@@ -18,18 +18,18 @@ const Consultations = () => {
     dir='rtl'
     className="bg-white p-6 w-full md:w-1/3 flex flex-col">
       <div>
-        <h2 className="text-xxl font-semibold">
+        <h2 className="text-3xl font-semibold">
           استشارة شخصية مع عبدالرحمن خالد | 30 دقيقة
         </h2>
-        <p className="text-green-600 text-lg font-bold mb-4">540 ريال سعودي</p>
+        <p className="text-green-600 text-2xl font-bold mb-4">540 ريال سعودي</p>
       </div>
       <div>
       <div className="flex flex-col  justify-between">
-        <p className="text-xl flex  text-right gap-2">
+        <p className="text-2xl my-4 flex  text-right gap-2">
           <span className=""><FontAwesomeIcon icon={faClock} /></span>
           مدة الجلسة: 0 ساعة 30 دقيقة
         </p>
-        <p className="text-xl flex  text-right gap-2">
+        <p className="text-2xl flex  text-right gap-2">
           <span className=""><FontAwesomeIcon icon={faVideo} /></span>
           المكان: مكالمة فيديو Google Meet
         </p>
@@ -50,6 +50,38 @@ const Consultations = () => {
         className="object-cover w-full h-full rounded-xl"
       />
     </div>
+  </div>
+
+
+  <div className='w-full p-8 text-right'>
+    <div className='flex justify-end align-middle'>
+    <h2 className='text-3xl align-baseline'>وصف الجلسة</h2>
+    <FontAwesomeIcon className='text-3xl ml-5' icon={faCircleInfo} />
+    </div>
+    <p className='text-right leading-loose'>استشارة خاصة مع عبدالرحمن خالد شخصياً لمدة 30 دقيقة
+<br />
+اقدر اساعدك في هذه المواضيع:
+<br />
+
+-كيف ترفع تفاعل حساباتك وتحصل على مشاهدات ومتابعين بشكل اسرع
+<br />
+
+-كيف تبني مشروعك الخاص
+<br />
+
+-كيف تستغل مهارتك لزيادة دخلك
+<br />
+
+-كيف تسوق لمشروعك بافضل الطرق
+<br />
+
+-كيف تصير مشهور في فترة قصيرة
+<br />
+
+-كيف تسوق من خلال صناعة المحتوى بالطريقة الصحيحة
+<br />
+
+استثمر في نفسك واطلب استشارتك الخاصة الان لنمو مشروعك ..</p>
   </div>
   </div>
   )
