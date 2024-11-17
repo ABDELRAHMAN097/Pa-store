@@ -1,5 +1,5 @@
+import bgfd from '../../assets/Consultations.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import image from '../../assets/Consultations.png';
 import { faClock, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -45,7 +45,7 @@ const Consultations = () => {
     {/* الجزء الخاص بالصورة والخلفية */}
     <div className="relative w-full md:w-2/3 h-48 md:h-auto">
       <img
-        src={image}
+        src={bgfd}
         alt="Background"
         className="object-cover w-full h-full rounded-xl"
       />
