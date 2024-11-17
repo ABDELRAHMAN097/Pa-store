@@ -4,6 +4,7 @@ import MulitSectionProductsSlider from '../components/sliders/MultiSectionProduc
 import StartWorkHomeBanner from '../components/banners/StartWorkHomeBanner';
 import OurGoals from '../components/Home/OurGoals';
 import HomeSlider from '../components/sliders/HomeSlider';
+import Consultations from '../components/Consultations/Consultations';
 
 const Home = () => {
   
@@ -24,6 +25,7 @@ const Home = () => {
       
       <OurGoals />
 
+      <Consultations/>
       
     </div>
   )

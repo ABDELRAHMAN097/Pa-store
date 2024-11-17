@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import BrowseJobs from "./pages/browsejobs/BrowseJobs";
 import JobDetails from "./pages/jobDetails/JobDetails";
 import ProductDetails from "./components/product/ProductDetails";
+import Consultations from "./components/Consultations/Consultations";
+
 
 function App() {
   const router = createBrowserRouter([
@@ -65,6 +67,10 @@ function App() {
           element: <JobDetails />,
         },
       ],
+    },
+    {
+      path: "consultations",
+      element: <Consultations />,
     },
     {
       path: "*",

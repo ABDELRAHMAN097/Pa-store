@@ -24,7 +24,7 @@ const HomeCategories = () => {
           </Link>
         </div>
       </div>
-
+      
     </div>
   );
 };
