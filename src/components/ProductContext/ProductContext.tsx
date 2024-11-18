@@ -29,7 +29,7 @@ export const ProductProvider: React.FC<{ children: ReactNode }> = ({ children })
   
   const [products] = useState<Product[]>([
     {
-      id: 'kayfaTbe3Ehawaa',
+      id: 'كيف تبيع الهواء',
       name: 'كيف تبيع الهواء',
       price: 2,
       oldPrice: 12,
