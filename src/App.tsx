@@ -32,7 +32,7 @@ function App() {
           element: <StoreSearch />,
         },
         {
-          path: "/ProductDetails/books/:id",
+          path: "/ProductDetails",
           element: <ProductDetails />,
         },
         {

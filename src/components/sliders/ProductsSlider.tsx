@@ -75,7 +75,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, types = [], select
                   <Slider {...settings} className="products-slick">
                     {filteredProducts.map((product, index) => (
                       <div className="product !scale-[0.95] hover:!scale-1" key={product.id}>
-                        <Link to={`/ProductDetails/books/${product.id}`}>
+                        <Link to={`/ProductDetails`}>
                           <div className="product-img">
                             <img src={product.images[0]} alt={product.name} />
                             <div className="product-label">
