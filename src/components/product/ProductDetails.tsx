@@ -64,7 +64,7 @@ const ProductDetails: React.FC = () => {
   return (
     <div className="section">
       <div className="container">
-        <div className="row space-between">
+        <div className="row space-between items-start">
           <div className="col-md-6">
             <Slider {...settings}>
               {product.images.map((src, index) => (
@@ -75,8 +75,8 @@ const ProductDetails: React.FC = () => {
             </Slider>
           </div>
 
-          <div className="col-md-6 h-full" dir="rtl">
-            <div className="product-details lg:translate-y-1/4 flex flex-col !justify-center">
+          <div className="col-md-6" dir="rtl">
+            <div className="product-details flex flex-col justify-start">
               <h2 className="product-name">{product.name}</h2>
               <div>
                 <div className="product-rating">
