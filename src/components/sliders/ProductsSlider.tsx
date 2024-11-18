@@ -2,28 +2,25 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './style/slidersMain.css'; // ملف CSS الخاص بك
-import { Link } from 'react-router-dom';
-import { useProductContext } from '../ProductContext/ProductContext'; // استخدام الـ Context
+import './style/slidersMain.css';
+import { Link } from 'react-router-dom'; // استخدمنا Link من react-router-dom
+import { useProductContext } from '../ProductContext/ProductContext';
 import OutlineButton from '../helpers/buttons/OutlineButton';
 
-// تعريف النوع لخصائص السهم (إن وجد)
 interface ProductSliderProps {
   title: string;
-  types?: string[];  // إضافة خاصية types
-  selectedType?: string;  // إضافة خاصية selectedType
+  types?: string[];
+  selectedType?: string;
   buttonTitle: string;
 }
 
 const ProductSlider: React.FC<ProductSliderProps> = ({ title, types = [], selectedType, buttonTitle }) => {
-  const { products } = useProductContext(); // جلب المنتجات من الـ Context
+  const { products } = useProductContext();
 
-  // تصفية المنتجات بناءً على النوع المحدد إذا كانت types موجودة
   const filteredProducts = types.length > 0
     ? products.filter(product => product.category === selectedType)
     : products;
 
-  // إعدادات السلايدر (Slider)
   const settings = {
     dots: true,
     infinite: true,
@@ -76,7 +73,6 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, types = [], select
               <div className="products-tabs">
                 <div id="tab1" className="tab-pane w-full active">
                   <Slider {...settings} className="products-slick">
-                    {/* عناصر السلايدر */}
                     {filteredProducts.map((product, index) => (
                       <div className="product !scale-[0.95] hover:!scale-1" key={product.id}>
                         <Link to={`/ProductDetails/books/${product.id}`}>
@@ -91,7 +87,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, types = [], select
                           <div className="product-body">
                             <p className="product-category">{product.category}</p>
                             <h3 className="product-name">
-                              <a href="#">{product.name}</a>
+                              <a>{product.name}</a>
                             </h3>
                             <h4 className="product-price">
                               ${product.price.toFixed(2)}{' '}
@@ -137,7 +133,6 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, types = [], select
           </div>
         </div>
       </div>
-      {/* زر عرض المزيد */}
       <OutlineButton isLink={true} link="/products" LinkclassNames='flex justify-center' classNames='' text={buttonTitle} />
     </div>
   );
